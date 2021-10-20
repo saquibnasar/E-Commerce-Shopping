@@ -1,0 +1,13 @@
+@import "../Scss/custom";
+@import "../Scss/mixins";
+.top-header {
+  background-color: $seconary-color;
+  @include media-queries-xs {
+    display: none;
+  }
+  span {
+    font-size: 0.875rem;
+    color: $white-color;
+    letter-spacing: 0.1065rem;
+  }
+}

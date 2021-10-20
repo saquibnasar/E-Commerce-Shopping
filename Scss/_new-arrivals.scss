@@ -1,0 +1,38 @@
+@import "../Scss/custom";
+@import "../Scss/mixins";
+@import "../Scss/mediaqueries";
+
+.new-arrivals {
+  .card-banner:nth-child(2) h2,
+  .card-banner:nth-child(2) p,
+  .card-banner:nth-child(2) a {
+    color: $black-color;
+  }
+  .card-banner:nth-child(2) a::after,
+  .card-banner:nth-child(2) a::before {
+    background-color: $black-color;
+  }
+  .card-banner {
+    position: relative !important;
+    .card-thumb {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      img {
+        transition: all 0.5s ease-out 0s;
+      }
+      img:hover {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+    }
+    .banner-info {
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      z-index: 9;
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}

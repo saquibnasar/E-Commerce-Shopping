@@ -1,0 +1,30 @@
+@import "../Scss/custom";
+@import "../Scss/mixins";
+#home {
+  @include media-queries-lg {
+    padding: 4.375rem 0 0;
+  }
+  @include media-queries-sm {
+    top: 1.5rem;
+  }
+  .carousel-caption {
+    top: 12rem;
+    @include media-queries-lg {
+      top: 3.5rem;
+    }
+    @include media-queries-xs {
+      padding: 0;
+    }
+    p {
+      max-width: 36.25rem;
+      margin: 1.0625rem auto;
+      @include media-queries-sm {
+        margin: 5px auto;
+      }
+      @include media-queries-xs {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+      }
+    }
+  }
+}

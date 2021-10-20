@@ -1,0 +1,69 @@
+@import "../Scss/custom";
+@import "../Scss/mixins";
+@import "../Scss/mediaqueries";
+header {
+  .navgation-wrap.scroll-on {
+    position: fixed;
+    background-color: $seconary-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 1 rgba(0, 0, 0, 0.09);
+    transition: all 0.1s ease-in-out 0s;
+    .nav-link:hover,
+    .nav-link:active {
+      color: $primary-color;
+    }
+  }
+  .navgation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+    transition: all 0.3s ease-out;
+    @include media-queries-lg {
+      text-align: right;
+      background-color: $black-color;
+    }
+    .navbar-brand {
+      img {
+        @include media-queries-lg {
+          height: 2.8125rem;
+        }
+      }
+    }
+
+    .navbar-toggler:focus {
+      outline: unset;
+      border: none;
+      box-shadow: none;
+    }
+    .navbar-toggler {
+      i {
+        @include media-queries-lg {
+          color: $white-color;
+          line-height: 2;
+        }
+      }
+    }
+    .nav-item {
+      padding: 0 0.5rem;
+      transition: all 200ms linear;
+      .nav-link {
+        @include media-queries-lg {
+          line-height: 1.875rem;
+        }
+        padding-top: 0.9375rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $white-color;
+        letter-spacing: 0.0625rem;
+      }
+      .nav-link:hover,
+      .nav-link:active {
+        color: $primary-color;
+      }
+    }
+  }
+}

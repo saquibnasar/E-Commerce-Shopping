@@ -1,0 +1,18 @@
+@import "../Scss/custom";
+@import "../Scss/mixins";
+
+.footer {
+  background-color: $seconary-color;
+  .footer-social {
+    a {
+      i {
+        font-size: 1.5rem;
+        color: $white-color;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+.footer .footer-social a:hover i {
+  color: $primary-color;
+}
